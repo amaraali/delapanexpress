@@ -6,8 +6,8 @@ UNIVERSITAS NEGERI SEMARANG ;
 
 
 User Login :
-admin@gmail.com as admin
+admin@gmail.com as admin - 
+gudang@gmail.com as gudang -
+kurir@gmail.com as kurir -
 pass : 1234 
------
-kurir@gmail.com as kurir
-pass : 1234
+
