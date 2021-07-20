@@ -1,7 +1,7 @@
 <?php
 class Modelpengiriman extends CI_Model
 {
-	public function getPengiriman()
+    public function getPengiriman()
     {
         return $this->db->get('pengiriman');
     }
@@ -26,14 +26,20 @@ class Modelpengiriman extends CI_Model
         $this->db->update('Pengiriman', $data, $where);
     }
 
+
+    public function insert_data($data, $table)
+    {
+        $this->db->insert($table, $data);
+    }
+
     public function joinpengiriman()
     {
         $this->db->select('*');
         $this->db->from('pengiriman');
-        $this->db->join('pelanggan' , 'pengiriman.id_pelanggan = pelanggan.id_pelanggan' , 'LEFT');
-        $this->db->join('barang' , 'pengiriman.id_barang = barang.id_barang' , 'LEFT');
-        $this->db->join('kurir' , 'pengiriman.id_kurir = kurir.id_kurir' , 'LEFT');
-        $this->db->join('layanan' , 'pengiriman.id_layanan = layanan.id_layanan' , 'LEFT');
+        $this->db->join('pelanggan', 'pengiriman.id_pelanggan = pelanggan.id_pelanggan', 'LEFT');
+        $this->db->join('barang', 'pengiriman.id_barang = barang.id_barang', 'LEFT');
+        $this->db->join('kurir', 'pengiriman.id_kurir = kurir.id_kurir', 'LEFT');
+        $this->db->join('layanan', 'pengiriman.id_layanan = layanan.id_layanan', 'LEFT');
         $query = $this->db->get();
         return $query;
     }
@@ -42,7 +48,7 @@ class Modelpengiriman extends CI_Model
     {
         $this->db->select('*');
         $this->db->from('pengiriman');
-        $this->db->join('kurir' , 'pengiriman.id_kurir = kurir.id_kurir' , 'LEFT');
+        $this->db->join('kurir', 'pengiriman.id_kurir = kurir.id_kurir', 'LEFT');
         $keyword = $this->input->post('keyword', true);
         $this->db->like('id_pengiriman', $keyword);
         return $this->db->get()->result_array();

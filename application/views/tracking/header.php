@@ -1,12 +1,10 @@
-<!doctype html>
+<!-- <!doctype html>
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <title><?= $judul; ?></title>
@@ -24,27 +22,55 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <!-- <div class="navbar-nav">
-          <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/daftarlayanan">Layanan <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/informasi">Informasi</a>
-          <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/aboutus">Tentang Kami</a>
-        </div>
-        <div><a class="nav-link " href="<?= base_url(); ?>autentifikasikasi">Login</a></div> -->
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
+          <li class="nav-item ">
             <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/daftarlayanan">Layanan <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/informasi">Informasi</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item ">
             <a class="nav-item nav-link" href="<?= base_url(); ?>tracking/aboutus">Tentang Kami</a>
           </li>
         </ul>
         <a class="nav-link my-2 my-sm-0" href="<?= base_url(); ?>autentifikasi">Login</a>
       </div>
     </div>
-  </nav>
+  </nav> -->
 
 
-  <!-- ##################################### -->
+<!-- ##################################### -->
+
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- ===============================================-->
+  <!--    Document Title-->
+  <!-- ===============================================-->
+  <title>Delapan Express</title>
+
+
+  <!-- ===============================================-->
+  <!--    Favicons-->
+  <!-- ===============================================-->
+  <link rel="apple-touch-icon" sizes="180x180" href="<?= base_url('assets/'); ?>/img/favicons/yuki.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="<?= base_url('assets/'); ?>/img/favicons/yuki.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="<?= base_url('assets/'); ?>/img/favicons/yuki.png">
+  <link rel="shortcut icon" type="image/x-icon" href="<?= base_url('assets/'); ?>/img/favicons/yuki.png">
+  <link rel="manifest" href="<?= base_url('assets/'); ?>/img/favicons/manifest.json">
+  <link rel="stylesheet" type="text/css" href="<?= base_url('assets/'); ?>/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.7.5/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="msapplication-TileImage" content="<?= base_url('assets/'); ?>/img/favicons/mstile-150x150.png">
+  <meta name="theme-color" content="#ffffff">
+
+
+  <!-- ===============================================-->
+  <!--    Stylesheets-->
+  <!-- ===============================================-->

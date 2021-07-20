@@ -1,18 +1,19 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-class Pengiriman extends CI_Controller {
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+class Pengiriman extends CI_Controller
+{
 
-	public function index()
-	{
-		$data['judul'] = "Data Pengiriman";
-		$data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
-		$data['pelanggan'] = $this->ModelPelanggan->getPelanggan()->result_array();
-		$data['kurir'] = $this->ModelKurir->getKurir()->result_array();
-		$data['pengiriman'] = $this->ModelPengiriman->getPengiriman()->result_array();
+    public function index()
+    {
+        $data['judul'] = "Data Pengiriman";
+        $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+        $data['pelanggan'] = $this->ModelPelanggan->getPelanggan()->result_array();
+        $data['kurir'] = $this->ModelKurir->getKurir()->result_array();
+        $data['pengiriman'] = $this->ModelPengiriman->getPengiriman()->result_array();
         $data['layanan'] = $this->ModelLayanan->getLayanan()->result_array();
         $data['barang'] = $this->ModelBarang->getBarang()->result_array();
         $data['data_pengiriman'] = $this->ModelPengiriman->joinpengiriman()->result_array();
 
-		$this->form_validation->set_rules('id_pengiriman', 'id_pengiriman', 'required', [
+        $this->form_validation->set_rules('id_pengiriman', 'id_pengiriman', 'required', [
             'required' => 'ID Pengiriman harus diisi'
         ]);
         $this->form_validation->set_rules('tanggal', 'tanggal', 'required', [
@@ -55,15 +56,15 @@ class Pengiriman extends CI_Controller {
             $this->ModelPengiriman->simpanPengiriman($data);
             redirect('pengiriman');
         }
-	}
+    }
 
-	public function ubahPengiriman()
+    public function ubahPengiriman()
     {
         $data['judul'] = "Ubah Data Pengiriman";
-		$data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
         $data['pengiriman'] = $this->ModelPengiriman->pengirimanWhere(['id_pengiriman' => $this->uri->segment(3)])->result_array();
-		$data['pelanggan'] = $this->ModelPelanggan->getPelanggan()->result_array();
-		$data['kurir'] = $this->ModelKurir->getKurir()->result_array();
+        $data['pelanggan'] = $this->ModelPelanggan->getPelanggan()->result_array();
+        $data['kurir'] = $this->ModelKurir->getKurir()->result_array();
         $data['layanan'] = $this->ModelLayanan->getLayanan()->result_array();
         $data['barang'] = $this->ModelBarang->getBarang()->result_array();
         $data['data_pengiriman'] = $this->ModelPengiriman->joinpengiriman()->result_array();
@@ -100,5 +101,4 @@ class Pengiriman extends CI_Controller {
         $this->ModelPengiriman->hapusPengiriman($where);
         redirect('pengiriman/index');
     }
-	
 }
